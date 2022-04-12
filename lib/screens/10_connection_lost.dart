@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/11_broken_link.dart';
 import 'package:flutter/material.dart';
 
 class ConnectionLostScreen extends StatelessWidget {
@@ -28,7 +29,10 @@ class ConnectionLostScreen extends StatelessWidget {
                 color: Color(0xFF6371AA),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BrokenLinkScreen()));
+                },
                 child: Text(
                   "retry".toUpperCase(),
                   style: TextStyle(color: Colors.white),

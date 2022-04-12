@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/6_error.dart';
 import 'package:flutter/material.dart';
 
 class SomethingWrongScreen extends StatelessWidget {
@@ -19,7 +20,10 @@ class SomethingWrongScreen extends StatelessWidget {
               color: Color(0xFF7070DA),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => ErrorScreen()));
+              },
               child: Text(
                 "go back".toUpperCase(),
                 style: TextStyle(color: Colors.white),

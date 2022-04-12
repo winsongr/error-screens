@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/14_no_result_found.dart';
 import 'package:flutter/material.dart';
 
 class NoSpaceScreen extends StatelessWidget {
@@ -28,7 +29,10 @@ class NoSpaceScreen extends StatelessWidget {
                 color: Color(0xFF6371AA),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NoResultFoundScreen()));
+                },
                 child: Text(
                   "Manage".toUpperCase(),
                   style: TextStyle(color: Colors.white),

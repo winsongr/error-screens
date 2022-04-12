@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/3_something_went_wrong.dart';
 import 'package:flutter/material.dart';
 
 class Error404Screen extends StatelessWidget {
@@ -19,7 +20,9 @@ class Error404Screen extends StatelessWidget {
               color: Color(0xFF6B92F2),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SomethingWentWrongScreen()));
+              },
               child: Text(
                 "Go Home".toUpperCase(),
                 style: TextStyle(color: Colors.white),

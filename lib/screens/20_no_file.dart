@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/21_camera_access.dart';
 import 'package:flutter/material.dart';
 
 class NoFileScreen extends StatelessWidget {
@@ -28,7 +29,10 @@ class NoFileScreen extends StatelessWidget {
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CameraAccessScreen()));
+                },
                 child: Text("Home".toUpperCase()),
               ),
             ),

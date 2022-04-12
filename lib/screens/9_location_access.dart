@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/10_connection_lost.dart';
 import 'package:flutter/material.dart';
 
 class LocationAccessScreen extends StatelessWidget {
@@ -29,7 +30,10 @@ class LocationAccessScreen extends StatelessWidget {
                 color: Color(0xFFFF9858),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ConnectionLostScreen()));
+                },
                 child: Text(
                   "Enable".toUpperCase(),
                   style: TextStyle(color: Colors.white),
