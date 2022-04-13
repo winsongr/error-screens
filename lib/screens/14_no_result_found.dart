@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/15_payment_faild.dart';
 import 'package:flutter/material.dart';
 
 class NoResultFoundScreen extends StatelessWidget {
@@ -42,6 +43,10 @@ class NoResultFoundScreen extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
+                onSubmitted: (str){
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PaymentFaildScreen()));
+                },
               ),
             ),
           )

@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/1_no_connection.dart';
 import 'package:flutter/material.dart';
 
 class CameraAccessScreen extends StatelessWidget {
@@ -29,7 +30,10 @@ class CameraAccessScreen extends StatelessWidget {
                 color: Color(0xFFED72AD),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NoConnectionScreen()));
+                },
                 child: Text(
                   "Allow".toUpperCase(),
                   style: TextStyle(color: Colors.white),

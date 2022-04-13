@@ -32,7 +32,10 @@ class ConnectionFaildScreen extends StatelessWidget {
                 color: Color(0xFF68C581),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NoFileScreen()));
+                },
                 child: Text(
                   "retry".toUpperCase(),
                   style: TextStyle(color: Colors.white),

@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/8_404_error_2.dart';
 import 'package:flutter/material.dart';
 
 class Error2Screen extends StatelessWidget {
@@ -29,7 +30,10 @@ class Error2Screen extends StatelessWidget {
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Error404Screen2()));
+                },
                 child: Text(
                   "retry".toUpperCase(),
                 ),

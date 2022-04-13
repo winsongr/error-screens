@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/19_connection_faild.dart';
 import 'package:flutter/material.dart';
 
 class RouterOfflineScreen extends StatelessWidget {
@@ -29,7 +30,10 @@ class RouterOfflineScreen extends StatelessWidget {
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ConnectionFaildScreen()));
+                },
                 child: Text(
                   "retry".toUpperCase(),
                 ),

@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/13_no_space.dart';
 import 'package:flutter/material.dart';
 
 class ArticleNotFoundScreen extends StatelessWidget {
@@ -29,7 +30,10 @@ class ArticleNotFoundScreen extends StatelessWidget {
                 color: Color(0xFF70D3DA),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => NoSpaceScreen()));
+                },
                 child: Text(
                   "Back".toUpperCase(),
                   style: TextStyle(color: Colors.white),

@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/17_location_error.dart';
 import 'package:flutter/material.dart';
 
 class TimeErrorScreen extends StatelessWidget {
@@ -28,7 +29,10 @@ class TimeErrorScreen extends StatelessWidget {
                 color: Color(0xFF6371AA),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LocationErrorScreen()));
+                },
                 child: Text(
                   "Retry".toUpperCase(),
                   style: TextStyle(color: Colors.white),

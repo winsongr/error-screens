@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/12_artical_not_found.dart';
 import 'package:flutter/material.dart';
 
 class BrokenLinkScreen extends StatelessWidget {
@@ -29,7 +30,10 @@ class BrokenLinkScreen extends StatelessWidget {
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ArticleNotFoundScreen()));
+                },
                 child: Text(
                   "retry".toUpperCase(),
                 ),

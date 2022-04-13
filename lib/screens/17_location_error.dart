@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/18_router_offline.dart';
 import 'package:flutter/material.dart';
 
 class LocationErrorScreen extends StatelessWidget {
@@ -28,7 +29,10 @@ class LocationErrorScreen extends StatelessWidget {
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => RouterOfflineScreen()));
+                },
                 child: Text("Refresh".toUpperCase()),
               ),
             ),

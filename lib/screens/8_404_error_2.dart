@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/9_location_access.dart';
 import 'package:flutter/material.dart';
 
 class Error404Screen2 extends StatelessWidget {
@@ -28,7 +29,10 @@ class Error404Screen2 extends StatelessWidget {
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LocationAccessScreen()));
+                },
                 child: Text("Home".toUpperCase()),
               ),
             ),

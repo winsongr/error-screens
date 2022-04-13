@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/16_time_error.dart';
 import 'package:flutter/material.dart';
 
 class PaymentFaildScreen extends StatelessWidget {
@@ -29,7 +30,10 @@ class PaymentFaildScreen extends StatelessWidget {
                 color: Color(0xFFFF6F6F),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TimeErrorScreen()));
+                },
                 child: Text(
                   "retry".toUpperCase(),
                   style: TextStyle(color: Colors.white),

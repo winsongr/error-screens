@@ -1,3 +1,4 @@
+import 'package:errorscreens/screens/5_something_wrong.dart';
 import 'package:flutter/material.dart';
 
 class FileNotFoundScreen extends StatelessWidget {
@@ -18,7 +19,12 @@ class FileNotFoundScreen extends StatelessWidget {
               color: Colors.white,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SomethingWrongScreen()));
+              },
               child: Text("Home".toUpperCase()),
             ),
           )
